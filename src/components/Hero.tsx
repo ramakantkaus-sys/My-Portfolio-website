@@ -93,8 +93,8 @@ const Hero = () => {
 
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/Images/CodeZenith-Resume.pdf';
-    link.download = 'CodeZenith-Resume.pdf';
+    link.href = '/Ramakant_Kaushik_Data_Scientist.pdf';
+    link.download = 'Ramakant Kaushik-Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -114,15 +114,15 @@ const Hero = () => {
         <h1 ref={titleRef} className="text-4xl md:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
           Hi, I'm{' '}
           <span className="text-glow bg-gradient-primary bg-clip-text text-transparent">
-            CodeZenith
+            Ramakant Kaushik
           </span>
           {' '}–{' '}
           <br className="hidden md:block" />
-          <span className="text-primary-glow">Full Stack Developer</span>
+          <span className="text-primary-glow">Data Scientist</span>
         </h1>
 
         <p ref={subtitleRef} className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Full Stack Developer crafting modern, responsive web apps with clean UI and robust backend architecture
+          Data Scientist specializing in machine learning, predictive modeling, and data-driven solutions
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4">

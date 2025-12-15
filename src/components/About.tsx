@@ -12,18 +12,18 @@ const About = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
 
   const skills = [
-    { icon: Globe, name: 'HTML5/CSS3', level: 95 },
-    { icon: Code, name: 'JavaScript', level: 90 },
-    { icon: Code, name: 'React/Redux', level: 95 },
-    { icon: Lightning, name: 'Tailwind CSS', level: 91 },
-    { icon: Cube, name: 'Bootstrap', level: 91 },
-    { icon: Rocket, name: 'Next.js', level: 85 },
-    { icon: Heart, name: 'UI/UX Design', level: 87 },
-    { icon: Terminal, name: 'Node.js/Express.js', level: 87 },
-    { icon: Database, name: 'MongoDB', level: 87 },
-    { icon: Database, name: 'PostgreSQL', level: 87 },
-    { icon: GitBranch, name: 'Git', level: 89 },
-    { icon: Cube, name: 'GitHub', level: 83 },
+    { icon: Code, name: 'Python', level: 90 },
+    { icon: Code, name: 'Machine Learning', level: 88 },
+    { icon: Lightning, name: 'Deep Learning', level: 87 },
+    { icon: Globe, name: 'NLP', level: 89 },
+    { icon: Cube, name: 'TensorFlow', level: 85 },
+    { icon: Rocket, name: 'PyTorch', level: 84 },
+    { icon: Heart, name: 'Data Analysis', level: 92 },
+    { icon: Terminal, name: 'SQL', level: 88 },
+    { icon: Database, name: 'MongoDB', level: 82 },
+    { icon: GitBranch, name: 'Git', level: 87 },
+    { icon: Cloud, name: 'AWS', level: 80 },
+    { icon: Cube, name: 'Hugging Face', level: 83 },
   ];
 
   useEffect(() => {
@@ -101,25 +101,25 @@ const About = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I’m a Full-Stack Developer with 1 year of hands-on experience building fast, scalable, and responsive web applications using React.js, Node.js, Express, MongoDB, and PostgreSQL/MySQL. I specialize in creating secure RESTful APIs, implementing modern frontend interfaces, and managing full deployment pipelines using tools like Docker and Git.
+              Passionate AI professional and Data Scientist with a strong foundation in mathematics and statistics. Experienced in building intelligent and automated AI systems using Machine Learning, Deep Learning, NLP, and Generative AI to transform complex data into actionable insights. Proven ability to work on advanced AI research projects, including multimodal agent evaluation and alignment, with a strong focus on accuracy, reasoning, and performance optimization.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My skill set spans both frontend and backend development, with a strong focus on clean code, smooth user experiences, and animation-driven UI using libraries like Framer Motion. I'm passionate about solving real-world problems with practical, efficient, and user-centered solutions.
+              My expertise includes developing and deploying machine learning models, working with large datasets, and creating data-driven solutions. I'm particularly interested in the intersection of AI and real-world applications, where I can leverage my skills to solve complex problems and deliver meaningful impact.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-primary-glow font-medium">1</span>
+                <span className="text-primary-glow font-medium">1.5+</span>
                 <span className="text-muted-foreground ml-1">Years Experience</span>
               </div>
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-secondary-glow font-medium">3+</span>
+                <span className="text-secondary-glow font-medium">5+</span>
                 <span className="text-muted-foreground ml-1">Projects Completed</span>
               </div>
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-accent-glow font-medium">100%</span>
-                <span className="text-muted-foreground ml-1">Client Satisfaction</span>
+                <span className="text-accent-glow font-medium">92%</span>
+                <span className="text-muted-foreground ml-1">Model Accuracy</span>
               </div>
             </div>
           </div>
