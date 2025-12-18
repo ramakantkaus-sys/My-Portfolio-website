@@ -6,7 +6,6 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
-import Chatbot from './Chatbot';
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +29,7 @@ const Portfolio = () => {
   return (
     <div className="relative">
       {isLoading && <Preloader onComplete={handleLoadingComplete} />}
-      
+
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Navigation />
         <main>
@@ -38,7 +37,6 @@ const Portfolio = () => {
           <About />
           <Projects />
           <Contact />
-          <Chatbot/>
         </main>
         <Footer />
       </div>
