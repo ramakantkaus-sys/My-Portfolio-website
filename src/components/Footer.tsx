@@ -71,7 +71,7 @@ const Footer = () => {
           <div>
 
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Building modern, high-performance web experiences through elegant design, clean code, and the latest technologies.
+              Building production AI systems — LLMs, RAG pipelines, and autonomous agents — engineered end to end.
             </p>
             <div className="flex gap-4">
               <a href="https://github.com/ramakantkaus-sys" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center hover:shadow-glow-primary transition-all duration-300 hover:scale-110">
@@ -118,7 +118,7 @@ const Footer = () => {
 
         <div className="border-t border-border/30 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-center md:text-left">
-            © 2025 Ramakant Kaushik. All rights reserved.
+            © 2026 Ramakant Kaushik. All rights reserved.
           </p>
 
           {/* <div className="flex items-center gap-2 text-muted-foreground">

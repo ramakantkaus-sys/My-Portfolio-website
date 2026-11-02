@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PaperPlaneTilt, GithubLogo, LinkedinLogo, Envelope, Phone, MapPin } from 'phosphor-react';
+import { useToast } from "@/hooks/use-toast";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  const { toast } = useToast();
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
@@ -73,7 +75,14 @@ const Contact = () => {
       });
     }
 
-    console.log('Form submitted:', formData);
+    const subject = encodeURIComponent(`Portfolio contact from ${formData.name || 'a visitor'}`);
+    const body = encodeURIComponent(`${formData.message}\n\n\u2014 ${formData.name} (${formData.email})`);
+    window.location.href = `mailto:ramakantkaus@gmail.com?subject=${subject}&body=${body}`;
+
+    toast({
+      title: "Message ready to send",
+      description: "Your email client should now open with the message pre-filled.",
+    });
 
     setFormData({ name: '', email: '', message: '' });
   };
@@ -176,10 +185,10 @@ const Contact = () => {
             <div>
               <h4 className="text-lg font-medium text-foreground mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center hover:shadow-glow-primary transition-all duration-300 hover:scale-110">
+                <a href="https://github.com/ramakantkaus-sys" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center hover:shadow-glow-primary transition-all duration-300 hover:scale-110">
                   <GithubLogo size={20} className="text-primary-foreground" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center hover:shadow-glow-secondary transition-all duration-300 hover:scale-110">
+                <a href="https://www.linkedin.com/in/kausramakant" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center hover:shadow-glow-secondary transition-all duration-300 hover:scale-110">
                   <LinkedinLogo size={20} className="text-secondary-foreground" />
                 </a>
               </div>

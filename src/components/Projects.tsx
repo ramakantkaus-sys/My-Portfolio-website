@@ -13,61 +13,62 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Multimodal Emotion Chatbot",
-      description: "Built a personal chatbot capable of detecting emotions from facial, vocal, and textual cues. Used OpenFace for facial analysis, Wav2Vec2 for voice emotion detection, and BERT for text-based emotion recognition. Enabled real-time emotion detection and adaptive, emotion-aware conversations.",
+      title: "The Nexus Cloud",
+      description: "Autonomous content pipeline at scale: discovery, engagement-based ranking, GPU rendering, and scheduled posting across 69 channels on major social media platforms with full database provenance for every asset. Maintaining the pipeline while scaling to 400+ channels.",
       image: "/Images/project-1.jpg",
-      tech: ["Python", "OpenFace", "Wav2Vec2", "BERT", "NLP", "Deep Learning"],
+      tech: ["Python", "GPU Pipelines", "Automation", "Data Engineering"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
       id: 2,
-      title: "YouTube Transcript Chatbot (RAG-based)",
-      description: "Developed a Retrieval-Augmented Generation (RAG) chatbot using Python, LangChain, GPT-4o-mini, and FAISS. Implemented automated YouTube transcript extraction, semantic text chunking, and vector embeddings. Enabled context-aware Q&A and interactive conversations over long-form video content.",
+      title: "PSYCHE OS",
+      description: "A 26-agent system that turns 6,000+ real conversations into evidence-based psychological profiles. 9-step pipeline with per-dimension micro-agents and an agent-debate mechanism for contested inferences. Built for HR teams and coaches.",
       image: "/Images/project-2.jpg",
-      tech: ["Python", "LangChain", "GPT-4o", "FAISS", "RAG", "NLP"],
-      liveUrl: "https://ragtubebot-rgkrm2fzffgrcy5ebahy2h.streamlit.app/",
-      githubUrl: "https://github.com/ramakantkaus-sys/RagTubeBot"
+      tech: ["LangGraph", "Multi-Agent Systems", "ChromaDB", "Python"],
+      liveUrl: "#",
+      githubUrl: "#"
     },
     {
       id: 3,
-      title: "Movie Recommendation System",
-      description: "Content-based movie recommendation system using NLP techniques to suggest similar movies based on plot, genres, keywords, cast, and director. Designed for cold-start scenarios and deployed as an interactive Streamlit application.Built a personalized recommendation engine using collaborative filtering, content-based filtering, and NLP-based review analysis.",
+      title: "AURA — Multimodal Emotion AI",
+      description: "Multimodal emotion AI in PyTorch + Transformers: text, voice, and facial-expression emotion engines fused in a 28-emotion VAD taxonomy, with sarcasm and emotional-drift detection steering a companion LLM's tone in real time.",
       image: "/Images/project-3.jpg",
-      tech: ["Python", "Machine Learning", "NLP", "Recommendation Systems", "Pandas", "Scikit-learn"],
-      liveUrl: "https://cinematchrecommendation.streamlit.app/",
-      githubUrl: "https://github.com/ramakantkaus-sys/Cinematch"
+      tech: ["PyTorch", "Transformers", "Computer Vision", "NLP"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/ramakantkaus-sys/AURA"
     },
     {
       id: 4,
-      title: "Chronic Disease Risk Prediction Model",
-      description: "Decision Tree based health risk assessment system analyzing demographic, lifestyle, and mental health parameters to predict the likelihood of chronic disease. Designed to support early risk screening and data-driven health insights.",
-      image: "/Images/project-5.jpg",
-      tech: ["Python", "Machine Learning", "NLP", "Recommendation Systems", "Pandas", "Scikit-learn"],
-      liveUrl: "https://depressionriskprediction.streamlit.app/",
-      githubUrl: "https://github.com/ramakantkaus-sys/Chronic-Disease-Risk-Prediction-Model"
+      title: "NeuralCraft · AI Engineer",
+      description: "Southwest Airlines: maintained the AWS cloud pipeline (Bedrock, Lambda, S3, SageMaker) behind a secure internal GPT platform; tested data upgrades to verify fixes before production. Humana: maintained the ETL testing pipeline — SQL validation of data correctness and transformation logic.",
+      image: "/Images/project-4.jpg",
+      tech: ["AWS Bedrock", "RAG", "Python", "SQL"],
+      liveUrl: "#",
+      githubUrl: "#"
     },
     {
       id: 5,
-      title: "Research Associate - Keywords Studios",
-      description: "Trained and evaluated advanced AI agents for a confidential AGI-level project, maintaining over 92% accuracy on complex reasoning and multimodal tasks. Supported model fine-tuning, alignment, and evaluation across text, vision, and other multimodal inputs.",
-      image: "/Images/project-4.jpg",
-      tech: ["AI Research", "Model Evaluation", "Multimodal AI", "Fine-tuning", "Python", "PyTorch"],
+      title: "Keywords Studios · Research Associate – AI",
+      description: "Tested and evaluated autonomous AI agent outputs in real-world web environments for a confidential AGI project — maintaining 92%+ task accuracy across multi-step reasoning and navigation benchmarks. Prompt engineering, failure analysis, and fine-tuning feedback.",
+      image: "/Images/project-5.jpg",
+      tech: ["AI Research", "LLM Evaluation", "Prompt Engineering", "PyTorch"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
       id: 6,
-      title: "Data Science Intern - AAM Infotech",
-      description: "Worked on Machine Learning, Deep Learning, and NLP projects, including recommender systems and predictive models. Assisted in data preprocessing, feature engineering, model training, and evaluation. Gained hands-on experience in real-world data science workflows.",
-      image: "/Images/project-5.jpg",
-      tech: ["Machine Learning", "Deep Learning", "NLP", "Data Preprocessing", "Model Training", "Python"],
-      liveUrl: "#",
-      githubUrl: "#"
+      title: "YouTube Transcript Chatbot (RAG-based)",
+      description: "Developed a Retrieval-Augmented Generation (RAG) chatbot using Python, LangChain, GPT-4o-mini, and FAISS. Implemented automated YouTube transcript extraction, semantic text chunking, and vector embeddings. Enabled context-aware Q&A and interactive conversations over long-form video content.",
+      image: "/Images/project-6.jpg",
+      tech: ["Python", "LangChain", "GPT-4o", "FAISS", "RAG", "NLP"],
+      liveUrl: "https://ragtubebot-rgkrm2fzffgrcy5ebahy2h.streamlit.app/",
+      githubUrl: "https://github.com/ramakantkaus-sys/RagTubeBot"
     }
   ];
 
   useEffect(() => {
+    const hoverCleanups: Array<() => void> = [];
     const ctx = gsap.context(() => {
       gsap.from(titleRef.current?.children || [], {
         y: 50,
@@ -99,28 +100,38 @@ const Projects = () => {
         Array.from(cards).forEach((card) => {
           const element = card as HTMLElement;
 
-          element.addEventListener('mouseenter', () => {
+          const onEnter = () => {
             gsap.to(element, {
               y: -10,
               scale: 1.02,
               duration: 0.3,
               ease: "power2.out"
             });
-          });
+          };
 
-          element.addEventListener('mouseleave', () => {
+          const onLeave = () => {
             gsap.to(element, {
               y: 0,
               scale: 1,
               duration: 0.3,
               ease: "power2.out"
             });
+          };
+
+          element.addEventListener('mouseenter', onEnter);
+          element.addEventListener('mouseleave', onLeave);
+          hoverCleanups.push(() => {
+            element.removeEventListener('mouseenter', onEnter);
+            element.removeEventListener('mouseleave', onLeave);
           });
         });
       }
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      hoverCleanups.forEach((fn) => fn());
+      ctx.revert();
+    };
   }, []);
 
   return (
@@ -132,10 +143,10 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my work in AI, Machine Learning, and Data Science — from research projects to real-world applications and professional experiences.          </p>
+            A showcase of my work in AI engineering — production LLM systems, autonomous agents, and applied machine learning, from research to real-world deployment.          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="glass cursor-pointer rounded-xl overflow-hidden hover:shadow-glow-primary transition-all duration-500 group">
               <div className="relative overflow-hidden h-48">

@@ -12,18 +12,18 @@ const About = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
 
   const skills = [
-    { icon: Code, name: 'Python', level: 90 },
+    { icon: Code, name: 'Python', level: 92 },
+    { icon: Lightning, name: 'LangChain & LangGraph', level: 90 },
+    { icon: Database, name: 'RAG & Vector DBs', level: 89 },
+    { icon: Terminal, name: 'Prompt Engineering', level: 91 },
+    { icon: Rocket, name: 'PyTorch', level: 86 },
     { icon: Code, name: 'Machine Learning', level: 88 },
-    { icon: Lightning, name: 'Deep Learning', level: 87 },
-    { icon: Globe, name: 'NLP', level: 89 },
-    { icon: Cube, name: 'TensorFlow', level: 85 },
-    { icon: Rocket, name: 'PyTorch', level: 84 },
-    { icon: Heart, name: 'Data Analysis', level: 92 },
-    { icon: Terminal, name: 'SQL', level: 88 },
-    { icon: Database, name: 'MongoDB', level: 82 },
+    { icon: Lightning, name: 'Deep Learning', level: 85 },
+    { icon: Globe, name: 'NLP', level: 87 },
+    { icon: Terminal, name: 'SQL', level: 90 },
+    { icon: Cloud, name: 'AWS', level: 84 },
+    { icon: Cube, name: 'FastAPI', level: 85 },
     { icon: GitBranch, name: 'Git', level: 87 },
-    { icon: Cloud, name: 'AWS', level: 80 },
-    { icon: Cube, name: 'Hugging Face', level: 83 },
   ];
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const About = () => {
 
               <div className="relative w-full h-full glass rounded-full p-2 hover:shadow-glow-primary transition-all duration-500 group">
                 <div className="w-full h-full cursor-pointer rounded-full overflow-hidden bg-gradient-secondary">
-                  <img src="/Images/profileLogo.jpg" alt="CodeZenith - Full Stack Developer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src="/Images/profileLogo.jpg" alt="Ramakant Kaushik - AI Engineer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
               </div>
 
@@ -101,25 +101,25 @@ const About = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Passionate AI professional and Data Scientist with a strong foundation in mathematics and statistics. Experienced in building intelligent and automated AI systems using Machine Learning, Deep Learning, NLP, and Generative AI to transform complex data into actionable insights. Proven ability to work on advanced AI research projects, including multimodal agent evaluation and alignment, with a strong focus on accuracy, reasoning, and performance optimization.
+              AI Engineer with 2+ years building production AI systems end to end — agentic LLM applications, multi-agent systems, RAG pipelines, and ML models. Founding member of THE PARADOX, an AI engineering studio serving clients across the US, UK, Australia, and Canada, and formerly AI Engineer at NeuralCraft, working on production pipelines for Southwest Airlines and Humana.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My expertise includes developing and deploying machine learning models, working with large datasets, and creating data-driven solutions. I'm particularly interested in the intersection of AI and real-world applications, where I can leverage my skills to solve complex problems and deliver meaningful impact.
+              My work centers on LLMs, RAG architectures, and autonomous AI agents — from research and prototyping through deployment. I maintain 92%+ task accuracy across real-world agent deployments, and I'm continuously hands-on with AI agents: mapping their capabilities and putting them to work to multiply productivity. My interests live at the intersection of mathematics, AI, and psychology — understanding how complex systems work from first principles.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-primary-glow font-medium">1.5+</span>
+                <span className="text-primary-glow font-medium">2+</span>
                 <span className="text-muted-foreground ml-1">Years Experience</span>
               </div>
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-secondary-glow font-medium">5+</span>
+                <span className="text-secondary-glow font-medium">10+</span>
                 <span className="text-muted-foreground ml-1">Projects Completed</span>
               </div>
               <div className="glass px-4 py-2 rounded-lg">
                 <span className="text-accent-glow font-medium">92%</span>
-                <span className="text-muted-foreground ml-1">Model Accuracy</span>
+                <span className="text-muted-foreground ml-1">Task Accuracy</span>
               </div>
             </div>
           </div>

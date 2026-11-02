@@ -93,8 +93,8 @@ const Hero = () => {
 
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/Ramakant_Kaushik_Data_Scientist.pdf';
-    link.download = 'Ramakant Kaushik-Resume.pdf';
+    link.href = '/Ramakant_Kaushik_AI_Engineer_Resume.pdf';
+    link.download = 'Ramakant Kaushik - AI Engineer Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -118,11 +118,11 @@ const Hero = () => {
           </span>
           {' '}–{' '}
           <br className="hidden md:block" />
-          <span className="text-primary-glow">Data Scientist</span>
+          <span className="text-primary-glow">AI Engineer</span>
         </h1>
 
         <p ref={subtitleRef} className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Data Scientist specializing in machine learning, predictive modeling, and data-driven solutions
+          AI Engineer specializing in LLMs, RAG pipelines, and autonomous AI agents — building production AI systems end to end
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4">

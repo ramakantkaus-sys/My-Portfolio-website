@@ -2,13 +2,18 @@ import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ChatCircle, X, PaperPlaneTilt, Robot } from 'phosphor-react';
 
+const nextMessageId = (list: { id: number }[]) => {
+  const last = list[list.length - 1];
+  return last ? last.id + 1 : 1;
+};
+
 const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hi! I'm AI assistant. How can I help you today?",
+      text: "Hi! I'm Ramakant's AI assistant. Ask me about his work, skills, or experience.",
       isBot: true,
       timestamp: new Date()
     }
@@ -50,39 +55,41 @@ const Chatbot: React.FC = () => {
   const handleSendMessage = () => {
     if (!message.trim()) return;
 
-    const newUserMessage = {
-      id: messages.length + 1,
-      text: message,
-      isBot: false,
-      timestamp: new Date()
-    };
-
-    setMessages(prev => [...prev, newUserMessage]);
+    const userText = message;
     setMessage('');
 
+    setMessages(prev => [...prev, {
+      id: nextMessageId(prev),
+      text: userText,
+      isBot: false,
+      timestamp: new Date()
+    }]);
+
     setTimeout(() => {
-      const userInput = message.toLowerCase();
+      const userInput = userText.toLowerCase();
 
       let reply = "Sorry, I didn't understand that. Can you rephrase it?";
 
-      if (userInput.includes("services")) {
-        reply = "CodeZenith offers services in frontend, backend development, animations, and AI integration. Would you like a portfolio link?";
-      } else if (userInput.includes("contact")) {
-        reply = "You can contact CodeZenith via the contact form above or email him directly at codezenithhq@gmail.com";
-      } else if (userInput.includes("react") || userInput.includes("gsap")) {
-        reply = "Yes! CodeZenith uses React, GSAP, and even WebGL to build stunning UIs.";
-      } else if (userInput.includes("project")) {
-        reply = "Tell me more about your project! CodeZenith can help with frontend, backend, UI/UX design, and building full-stack web applications.";
+      if (userInput.includes("service") || userInput.includes("hire") || userInput.includes("work with")) {
+        reply = "Ramakant builds production AI systems: LLM apps, RAG pipelines, autonomous AI agents, and voice automation for clients across the US, UK, Australia, and Canada. Use the contact form or email ramakantkaus@gmail.com to start a conversation.";
+      } else if (userInput.includes("experience") || userInput.includes("neuralcraft") || userInput.includes("job")) {
+        reply = "Ramakant is a founding member & AI Systems Engineer at THE PARADOX, formerly AI Engineer at NeuralCraft (Southwest Airlines, Humana), and Research Associate \u2013 AI at Keywords Studios, where he held 92%+ task accuracy on agent evaluations.";
+      } else if (userInput.includes("skill") || userInput.includes("tech") || userInput.includes("stack")) {
+        reply = "His core stack: Python, LangChain/LangGraph, RAG & vector databases (FAISS, ChromaDB), prompt engineering, PyTorch, AWS (Bedrock, Lambda, S3, SageMaker), FastAPI, and SQL.";
+      } else if (userInput.includes("project") || userInput.includes("portfolio") || userInput.includes("built")) {
+        reply = "Highlights: The Nexus Cloud (autonomous content pipeline scaling to 400+ channels), PSYCHE OS (26-agent psychological profiling), AURA (multimodal emotion AI), and a YouTube RAG chatbot. Scroll to the Projects section for details.";
+      } else if (userInput.includes("contact") || userInput.includes("email") || userInput.includes("phone")) {
+        reply = "You can reach Ramakant via the contact form above, email him at ramakantkaus@gmail.com, or call +91 72062 42521.";
+      } else if (userInput.includes("resume") || userInput.includes("cv")) {
+        reply = "You can download his AI Engineer resume with the \u2018Download CV\u2019 button in the hero section at the top of the page.";
       }
 
-      const botResponse = {
-        id: messages.length + 2,
+      setMessages(prev => [...prev, {
+        id: nextMessageId(prev),
         text: reply,
         isBot: true,
         timestamp: new Date()
-      };
-
-      setMessages(prev => [...prev, botResponse]);
+      }]);
     }, 1000);
 
   };
