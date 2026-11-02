@@ -9,26 +9,26 @@ const education = [
   {
     icon: Medal,
     title: 'Data Science Professional Training',
-    institution: 'Ducat \u2014 Noida',
-    period: 'Apr 2024 \u2014 Mar 2025',
+    institution: 'Ducat — Noida',
+    period: 'Apr 2024 — Mar 2025',
     description:
-      'Eight-month intensive program with three additional months of hands-on training: Python, statistics, machine learning, deep learning, SQL, and Power BI \u2014 the foundation I built my AI career on.',
+      'Eight-month intensive program with three additional months of hands-on training: Python, statistics, machine learning, deep learning, SQL, and Power BI — the foundation I built my AI career on.',
   },
   {
     icon: GraduationCap,
-    title: 'BSc \u2014 Non-Medical',
-    institution: 'KLP College, Rewari \u2014 Indira Gandhi University, Meerpur',
-    period: '2020 \u2014 2023',
+    title: 'BSc — Non-Medical',
+    institution: 'KLP College, Rewari — Indira Gandhi University, Meerpur',
+    period: '2020 — 2023',
     description:
-      'Physics, Chemistry, Mathematics. A first-principles math background that shows up in everything I build \u2014 from model evaluation to algorithmic reasoning.',
+      'Physics, Chemistry, Mathematics. A first-principles math background that shows up in everything I build — from model evaluation to algorithmic reasoning.',
   },
   {
     icon: GraduationCap,
-    title: 'Senior Secondary (XII) \u2014 91% \u00b7 Secondary (X) \u2014 90%',
+    title: 'Senior Secondary (XII) — 91% · Secondary (X) — 90%',
     institution: 'Haryana Board (HBSE)',
-    period: '2018 \u2014 2020',
+    period: '2018 — 2020',
     description:
-      'Scored 100 in Mathematics (Class X) and 99 in Mathematics (Class XII) \u2014 the pattern started early.',
+      'Scored 100 in Mathematics (Class X) and 99 in Mathematics (Class XII) — the pattern started early.',
   },
 ];
 
@@ -71,7 +71,7 @@ const Education = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Math first, machines second \u2014 the order matters.
+            Math first, machines second — the order matters.
           </p>
         </div>
 
@@ -101,9 +101,9 @@ const Education = () => {
               <Translate size={22} className="text-accent-foreground" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-1">English \u2014 C2 Proficient</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-1">English — C2 Proficient</h3>
               <p className="text-sm text-muted-foreground">
-                EF SET English Certificate: full professional proficiency \u2014 reading, listening, writing, and speaking.
+                EF SET English Certificate: full professional proficiency — reading, listening, writing, and speaking.
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ const Education = () => {
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-1">Interests</h3>
               <p className="text-sm text-muted-foreground">
-                Mathematics, AI, and psychology \u2014 formal systems, machine intelligence, and cognitive science;
+                Mathematics, AI, and psychology — formal systems, machine intelligence, and cognitive science;
                 understanding how complex systems work from first principles.
               </p>
             </div>

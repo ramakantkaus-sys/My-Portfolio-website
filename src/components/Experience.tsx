@@ -21,12 +21,12 @@ const experiences: ExperienceItem[] = [
     id: 1,
     role: 'Founding Member & AI Systems Engineer',
     company: 'THE PARADOX',
-    period: '2025 \u2014 Present',
+    period: '2025 — Present',
     location: 'Gurugram, India',
     summary: 'AI engineering studio serving clients across the US, UK, Australia, and Canada.',
     details: [
-      'PSYCHE OS \u2014 a 26-agent system turning 6,000+ real conversations into evidence-based psychological profiles: 9-step pipeline, per-dimension micro-agents, and an agent-debate mechanism for contested inferences.',
-      'Outreach/content automation \u2014 WhatsApp, LinkedIn, and mail processes fully automated, powered by Groq API keys.',
+      'PSYCHE OS — a 26-agent system turning 6,000+ real conversations into evidence-based psychological profiles: 9-step pipeline, per-dimension micro-agents, and an agent-debate mechanism for contested inferences.',
+      'Outreach/content automation — WhatsApp, LinkedIn, and mail processes fully automated, powered by Groq API keys.',
       'Production AI systems for clients: AI voice receptionists, lead re-engagement automation, and multi-agent workflows.',
     ],
     tech: ['LangChain', 'LangGraph', 'Python', 'Multi-Agent Systems', 'RAG'],
@@ -35,22 +35,22 @@ const experiences: ExperienceItem[] = [
     id: 2,
     role: 'AI Engineer',
     company: 'NeuralCraft Pixelgenius Pvt Ltd',
-    period: 'Mar 2026 \u2014 May 2026',
+    period: 'Mar 2026 — May 2026',
     location: 'US Enterprise Clients',
     summary: 'Production pipelines for Southwest Airlines and Humana.',
     details: [
-      'Southwest Airlines \u2014 maintained the AWS cloud pipeline (Bedrock, Lambda, S3, SageMaker) behind a secure internal GPT platform; tested data upgrades to verify development-side fixes before production release.',
-      'Humana \u2014 maintained the ETL testing pipeline: SQL testing and validation of data correctness and transformation logic.',
+      'Southwest Airlines — maintained the AWS cloud pipeline (Bedrock, Lambda, S3, SageMaker) behind a secure internal GPT platform; tested data upgrades to verify development-side fixes before production release.',
+      'Humana — maintained the ETL testing pipeline: SQL testing and validation of data correctness and transformation logic.',
     ],
     tech: ['AWS Bedrock', 'Lambda', 'S3', 'SageMaker', 'SQL', 'Python'],
   },
   {
     id: 3,
-    role: 'Research Associate \u2013 AI',
+    role: 'Research Associate – AI',
     company: 'Keywords Studios',
-    period: 'Apr 2025 \u2014 Sep 2025',
+    period: 'Apr 2025 — Sep 2025',
     location: 'Gurgaon, India',
-    summary: 'Confidential AGI project \u2014 autonomous agent evaluation at 92%+ accuracy.',
+    summary: 'Confidential AGI project — autonomous agent evaluation at 92%+ accuracy.',
     details: [
       'Tested and evaluated autonomous AI agent outputs in real-world web environments; tracked task success rates, maintaining 92%+ accuracy across multi-step reasoning and navigation benchmarks.',
       'Wrote, iterated, and optimized prompts for LLM-powered agents; analyzed failure cases and fed findings back into prompt, workflow, and model fine-tuning/alignment improvements.',
@@ -61,7 +61,7 @@ const experiences: ExperienceItem[] = [
     id: 4,
     role: 'Data Science Intern',
     company: 'AAM Infotech Pvt. Ltd.',
-    period: 'Oct 2024 \u2014 Mar 2025',
+    period: 'Oct 2024 — Mar 2025',
     location: 'Gurgaon, India',
     summary: 'End-to-end ML pipelines, from ingestion to stakeholder dashboards.',
     details: [
@@ -123,7 +123,7 @@ const Experience = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From data science training to production AI for US enterprises \u2014 every step, hands-on.
+            From data science training to production AI for US enterprises — every step, hands-on.
           </p>
         </div>
 
@@ -162,7 +162,7 @@ const Experience = () => {
                             {exp.role}
                           </h3>
                           <p className="text-muted-foreground mt-1">
-                            {exp.company} \u00b7 {exp.location}
+                            {exp.company} · {exp.location}
                           </p>
                           <p className="text-sm text-muted-foreground/80 mt-2">{exp.summary}</p>
                         </div>
@@ -183,7 +183,7 @@ const Experience = () => {
                           <ul className="space-y-2 mb-4">
                             {exp.details.map((d, i) => (
                               <li key={i} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
-                                <span className="text-primary-glow mt-0.5">\u25b8</span>
+                                <span className="text-primary-glow mt-0.5">▸</span>
                                 <span>{d}</span>
                               </li>
                             ))}
