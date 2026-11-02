@@ -64,6 +64,15 @@ const Projects = () => {
       tech: ["Python", "LangChain", "GPT-4o", "FAISS", "RAG", "NLP"],
       liveUrl: "https://ragtubebot-rgkrm2fzffgrcy5ebahy2h.streamlit.app/",
       githubUrl: "https://github.com/ramakantkaus-sys/RagTubeBot"
+    },
+    {
+      id: 7,
+      title: "Depression Prediction from Survey Data",
+      description: "Decision-tree classifier trained on 413,769 survey records to identify at-risk individuals, with a focus on early intervention. End-to-end workflow: data cleaning, feature engineering, and model evaluation with scikit-learn.",
+      image: "/Images/project-1.jpg",
+      tech: ["Python", "Scikit-learn", "Decision Trees", "Pandas", "ML"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/ramakantkaus-sys/Depression-prediction-model"
     }
   ];
 

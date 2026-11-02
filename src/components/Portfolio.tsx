@@ -3,9 +3,12 @@ import Preloader from './Preloader';
 import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
+import Experience from './Experience';
+import Education from './Education';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import Chatbot from './Chatbot';
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,14 +32,17 @@ const Portfolio = () => {
   return (
     <div className="relative">
       {isLoading && <Preloader onComplete={handleLoadingComplete} />}
-
+      
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Navigation />
         <main>
           <Hero />
           <About />
           <Projects />
+          <Experience />
+          <Education />
           <Contact />
+          <Chatbot/>
         </main>
         <Footer />
       </div>
